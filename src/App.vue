@@ -1,4 +1,8 @@
 <template>
-  <h1>Bonjour</h1>
+  <h1>Bonjour {{ name }}</h1>
   <p>Commentaire</p>
 </template>
+
+<script setup>
+const name = 'John Doe'
+</script>
