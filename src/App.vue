@@ -10,7 +10,7 @@
     </div>
   <div class="contact">
     <LinkedinIcon />
-    <GithubIcon />
+    <img src="./assets/icons/github.svg" alt="GitHub Icon" />
     <CvIcon />
   </div>
   </header>
@@ -20,6 +20,7 @@
 import LinkedinIcon from '@/assets/icons/linkedin.svg'
 import CvIcon from '@/assets/icons/cv.svg'
 import GithubIcon from '@/assets/icons/github.svg'
+import HtmlIcon from '@/assets/icons/html5.svg'
 </script>
 
 
