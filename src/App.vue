@@ -9,20 +9,30 @@
      </ul>
     </div>
   <div class="contact">
-    <LinkedinIcon />
-    <img src="./assets/icons/github.svg" alt="GitHub Icon" />
-    <CvIcon />
+    <LinkedinIcon class="icon-size" />
+    <GithubIcon class="icon-size" />
+    <a href="#">CV</a>
   </div>
   </header>
 </template>
 
+<style scoped>
+.icon-size {
+  width: 60px;
+  height: 60px;
+}
+</style>
+
 <script setup>
 import LinkedinIcon from '@/assets/icons/linkedin.svg'
-import CvIcon from '@/assets/icons/cv.svg'
 import GithubIcon from '@/assets/icons/github.svg'
 import HtmlIcon from '@/assets/icons/html5.svg'
 </script>
 
 
 <style>
+.icon-size {
+  width: 80px;
+  height: 80px;
+}
 </style>
