@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="header-container">
       <header>
       <div class="logo"><img src="../assets/icons/logo.svg" alt="Picto JP"></div>
       <div class="menu">
