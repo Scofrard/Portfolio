@@ -1,6 +1,7 @@
 <template>
   <div class="header-container">
-      <header>
+  
+    <header>
       <div class="logo"><img src="../assets/icons/logo.svg" alt="Picto JP"></div>
       <div class="menu">
           <ul>
@@ -34,6 +35,17 @@
         </div>
       </nav>
     </header>
+
+    <!-- Hero banner -->
+    <!-- Hero banner -->
+    <!-- Hero banner -->
+     
+    <div class="herobanner">
+      <h1>Le dev qu'il vous faut</h1>
+      <h2>Julien Petit</h2>
+      <p>Développeur web freelance</p>
+    </div>
+    
   </div>
 </template>
 
