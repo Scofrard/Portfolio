@@ -43,7 +43,9 @@
       <h2>Le dev qu'il vous faut</h2>
       <p>Designer UI/UX et Développeur front-end freelance en Belgique</p>
       <a href="#">Me contacter<span class="arrow-right"><ArrowRightIcon/></span></a>
+      <div class="scroll-wrapper">
       <ArrowDropLeftIcon class="scroll-icon"/>
+      </div>
     </div>
   </div>
 </template>
@@ -291,6 +293,24 @@ const isMenuOpen = ref(false)
     bottom: 0;
     right: 0;
     padding: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .herobanner {
+    .scroll-icon {
+      padding: 0;
+    }
+    .scroll-wrapper {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: flex-end;
+    }
   }
 }
 </style>
