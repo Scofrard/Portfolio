@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 22 21">
+  <!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <ellipse cx="11" cy="10.5" rx="11" ry="10.5"/>
+  <path class="st0" d="M10.26,16l5.82-5.96.02,1.02-5.84-5.78h2.06l5,4.84v.86l-5,5.02h-2.06ZM5.04,11.38v-1.5h10.92v1.5H5.04Z"/>
+</svg>

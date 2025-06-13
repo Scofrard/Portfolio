@@ -2,7 +2,7 @@
   <div class="header-container">
   
     <header>
-      <div class="logo"><img src="../assets/icons/logo.svg" alt="Picto JP"></div>
+      <Logo class="logo" />
       <div class="menu">
           <ul>
             <li><a href="#">A propos</a></li>
@@ -41,20 +41,24 @@
     <!-- Hero banner -->
      
     <div class="herobanner">
-      <h1>Le dev qu'il vous faut</h1>
-      <h2>Julien Petit</h2>
-      <p>Développeur web freelance</p>
+      <h1>Julien Petit</h1>
+      <h2>Le dev qu'il vous faut</h2>
+      <p>Designer UI/UX et Développeur front-end freelance en Belgique</p>
+      <a href="#">Me contacter<span class="arrow-right"><ArrowRightIcon/></span></a>
+      <ArrowDropLeftIcon class="scroll-icon"/>
     </div>
-    
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import Logo from '@/assets/icons/logo.svg'
 import LinkedinIcon from '@/assets/icons/linkedin.svg'
 import GithubIcon from '@/assets/icons/github.svg'
 import HamburgerIcon from '@/assets/icons/hamburger.svg'
 import CloseIcon from '@/assets/icons/close.svg'
+import ArrowRightIcon from '@/assets/icons/arrowright.svg'
+import ArrowDropLeftIcon from '@/assets/icons/arrowdropleft.svg'
 import HtmlIcon from '@/assets/icons/html5.svg'
 
 const isMenuOpen = ref(false)
