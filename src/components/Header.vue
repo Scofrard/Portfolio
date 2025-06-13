@@ -64,5 +64,233 @@ const isMenuOpen = ref(false)
 
 
 <style lang="scss">
-@use '../styles/header.scss';
+
+.header-container {
+  max-width: 100%;
+  height: calc(100vh - 1rem);
+  padding-top: 1rem;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #E4B8FF, #9F01FF);
+
+  /* HEADER + NAVBAR */
+  /* HEADER + NAVBAR */
+  /* HEADER + NAVBAR */
+
+  header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        width: 80px;
+        height: auto;
+    }
+
+    .menu{
+        ul {
+          display: flex;
+          li {
+            padding: 0 .5rem;
+            a {
+              text-decoration: none;
+              color: black;
+            }
+          }
+        }
+      }
+      .contact {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        a {
+          text-decoration: none;
+          .icon-size {
+          width: 30px;
+          height: 30px;
+        }
+       }
+      }
+    .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    }
+    .overlay {
+      display: none;
+    }
+    nav {
+      display: none;
+    }
+  }
+}
+
+    /* TABLET SCREEN */
+    /* TABLET SCREEN */
+    /* TABLET SCREEN */
+
+    @media (max-width: 1260px) {
+      .header-container {
+        header {
+          max-width: 1200px;
+          padding: 0 2rem;
+        
+          .logo {
+            width: 70px;
+            height: auto;
+        }
+        }
+      }
+    }
+
+    /* MOBILE SCREEN */
+    /* MOBILE SCREEN */
+    /* MOBILE SCREEN */
+
+    @media (max-width: 768px) {
+      .header-container {
+        header {
+          max-width: 100%;
+          padding: 0 2rem;
+
+          .logo {
+        width: 60px;
+        height: auto;
+    }
+          .menu {
+        display: none;
+      }
+      .contact {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+        padding: 1rem 0 1rem 1rem;
+        svg {
+        width: 45px;
+        height: 45px;
+        }
+      }   
+
+      .overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 30%;
+      height: 100vh;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        position: fixed;
+        top: 0;
+        right: 0; 
+        bottom: 0; 
+        width: 70%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+
+        &.open {
+          transform: translateX(0);
+        }
+
+        .close {
+          border: none;
+          background: none;
+          padding: 0;
+          cursor: pointer; 
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin: 2rem 3rem 0 0;
+        }
+
+        .menu,
+        .contact {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .menu ul {
+          flex-direction: column;
+          gap: 0.5rem;
+          li {
+            text-align: center;
+            margin: 1rem 0;
+            a {
+              font-size: 1.2rem;
+              font-weight: 600;
+              padding: 1rem 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.herobanner {
+  height: calc(100vh - 104px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  max-width: 100%;
+  padding: 0 2rem;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #FFF;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  a {
+    background-color: #FFF;
+    padding: .8rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    border: solid 2px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    .arrow-right {
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .scroll-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 2rem;
+  }
+}
 </style>
