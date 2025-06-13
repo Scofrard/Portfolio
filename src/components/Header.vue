@@ -37,8 +37,6 @@
     </header>
 
     <!-- Hero banner -->
-    <!-- Hero banner -->
-    <!-- Hero banner -->
      
     <div class="herobanner">
       <h1>Julien Petit</h1>

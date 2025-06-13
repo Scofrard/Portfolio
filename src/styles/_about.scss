@@ -1,0 +1,13 @@
+.about-container {
+    background-color: #9F01FF;
+    height: 50vh;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        color: #fff;
+    }
+}
