@@ -11,5 +11,5 @@ import ArrowRightIcon from '@/assets/icons/arrowright.svg'
 </script>
 
 <style lang="scss">
-@use '../styles/header.scss';
+@use '../styles/about.scss';
 </style>
