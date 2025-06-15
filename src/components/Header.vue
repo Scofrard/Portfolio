@@ -72,7 +72,7 @@ const isMenuOpen = ref(false)
   height: calc(100vh - 1rem);
   padding-top: 1rem;
   margin: 0 auto;
-  background: linear-gradient(to bottom, #E4B8FF, #9F01FF);
+  background: #02543D;
 
   /* HEADER + NAVBAR */
   /* HEADER + NAVBAR */
@@ -97,7 +97,7 @@ const isMenuOpen = ref(false)
             padding: 0 .5rem;
             a {
               text-decoration: none;
-              color: black;
+              color: #F2EFDF;
             }
           }
         }
@@ -261,14 +261,14 @@ const isMenuOpen = ref(false)
   }
 
   p {
-    color: #FFF;
+    color: #F2EFDF;
     margin-bottom: 1rem;
     padding: 0 1rem;
     text-align: center;
   }
 
   a {
-    background-color: #FFF;
+    background-color: #F2EFDF;
     padding: .8rem 1.8rem;
     border-radius: 30px;
     text-decoration: none;
