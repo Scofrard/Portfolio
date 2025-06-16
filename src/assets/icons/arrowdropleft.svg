@@ -1,4 +1,15 @@
-<svg width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M36.5 2.00002L4.24074 34.2593" stroke="white" stroke-width="5"/>
-<path d="M2.99999 10.6852L2.99999 35.5001L29.0555 35.5001" stroke="white" stroke-width="5"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 39 38">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M36.5,2L4.2,34.3"/>
+  <path class="st0" d="M3,10.7v24.8h26.1"/>
 </svg>

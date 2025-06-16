@@ -1,26 +1,32 @@
 <template>
   <div class="header-container">
-  
+
     <header>
       <Logo class="logo" />
       <div class="menu">
-          <ul>
-            <li><a href="#">A propos</a></li>
-            <li><a href="#">Compétences</a></li>
-            <li><a href="#">Projets</a></li>
-          </ul>
-        </div>
-        <div class="contact">
-          <a href="https://www.linkedin.com/in/%F0%9F%9A%80-julien-petit-182580266/" target="_blank"><LinkedinIcon class="icon-size" /></a>
-          <a href="https://github.com/Scofrard" target="_blank"><GithubIcon class="icon-size" /></a>
-          <a href="https://github.com/Scofrard" target="_blank">CV</a>
-        </div>
+        <ul>
+          <li><a href="#">A propos</a></li>
+          <li><a href="#">Compétences</a></li>
+          <li><a href="#">Projets</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <a href="https://github.com/Scofrard" target="_blank">CV</a>
+        <a href="https://www.linkedin.com/in/%F0%9F%9A%80-julien-petit-182580266/" target="_blank">
+          <LinkedinIcon class="icon-size" />
+        </a>
+        <a href="https://github.com/Scofrard" target="_blank">
+          <GithubIcon class="icon-size" />
+        </a>
+      </div>
       <button class="hamburger" @click="isMenuOpen = !isMenuOpen">
-        <HamburgerIcon/>
+        <HamburgerIcon />
       </button>
       <div v-if="isMenuOpen" class="overlay" @click="isMenuOpen = false"></div>
       <nav :class="{ open: isMenuOpen }">
-        <button class="close" @click="isMenuOpen = false"><CloseIcon/></button>
+        <button class="close" @click="isMenuOpen = false">
+          <CloseIcon />
+        </button>
         <div class="menu">
           <ul>
             <li><a href="#">A propos</a></li>
@@ -29,22 +35,28 @@
           </ul>
         </div>
         <div class="contact">
-          <a href="https://www.linkedin.com/in/%F0%9F%9A%80-julien-petit-182580266/" target="_blank"><LinkedinIcon class="icon-size" /></a>
-          <a href="https://github.com/Scofrard" target="_blank"><GithubIcon class="icon-size" /></a>
+          <a href="https://www.linkedin.com/in/%F0%9F%9A%80-julien-petit-182580266/" target="_blank">
+            <LinkedinDarkIcon class="icon-size" />
+          </a>
+          <a href="https://github.com/Scofrard" target="_blank">
+            <GithubDarkIcon class="icon-size" />
+          </a>
           <a href="https://github.com/Scofrard" target="_blank">CV</a>
         </div>
       </nav>
     </header>
 
     <!-- Hero banner -->
-     
+
     <div class="herobanner">
       <h1>Julien Petit</h1>
       <h2>Le dev qu'il vous faut</h2>
       <p>Designer UI/UX et Développeur front-end freelance en Belgique</p>
-      <a href="#">Me contacter<span class="arrow-right"><ArrowRightIcon/></span></a>
+      <a href="#" class="primary-btn">Me contacter
+        <ArrowRightIcon />
+      </a>
       <div class="scroll-wrapper">
-      <ArrowDropLeftIcon class="scroll-icon"/>
+        <ArrowDropLeftIcon class="scroll-icon" />
       </div>
     </div>
   </div>
@@ -54,7 +66,9 @@
 import { ref } from 'vue'
 import Logo from '@/assets/icons/logo.svg'
 import LinkedinIcon from '@/assets/icons/linkedin.svg'
+import LinkedinDarkIcon from '@/assets/icons/linkedindark.svg'
 import GithubIcon from '@/assets/icons/github.svg'
+import GithubDarkIcon from '@/assets/icons/githubdark.svg'
 import HamburgerIcon from '@/assets/icons/hamburger.svg'
 import CloseIcon from '@/assets/icons/close.svg'
 import ArrowRightIcon from '@/assets/icons/arrowright.svg'
@@ -66,14 +80,14 @@ const isMenuOpen = ref(false)
 
 
 <style lang="scss">
+@use '@/styles/global.scss' as *;
 
 .header-container {
   max-width: 100%;
   height: calc(100vh - 1rem);
   padding-top: 1rem;
   margin: 0 auto;
-  background: #02543D;
-
+  background: $color-primary;
   /* HEADER + NAVBAR */
   /* HEADER + NAVBAR */
   /* HEADER + NAVBAR */
@@ -86,85 +100,119 @@ const isMenuOpen = ref(false)
     justify-content: space-between;
 
     .logo {
-        width: 80px;
-        height: auto;
+      width: 80px;
+      height: auto;
     }
 
-    .menu{
-        ul {
-          display: flex;
-          li {
-            padding: 0 .5rem;
-            a {
-              text-decoration: none;
-              color: #F2EFDF;
+    .menu {
+      margin-left: 66px;
+
+      ul {
+        display: flex;
+
+        li {
+          padding: 0 1rem;
+
+          a {
+            position: relative;
+            color: $color-secondary;
+            text-decoration: none;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -5px;
+              left: 0;
+              width: 0%;
+              height: 2px;
+              background-color: $color-secondary;
+              transition: width 0.2s ease-in-out;
+            }
+
+            &:hover::after {
+              width: 100%;
             }
           }
         }
       }
-      .contact {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        a {
-          text-decoration: none;
-          .icon-size {
-          width: 30px;
-          height: 30px;
-        }
-       }
-      }
-    .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 3rem;
-    cursor: pointer;
     }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+
+      a {
+        text-decoration: none;
+        padding: .5rem;
+        color: $color-secondary;
+
+        .icon-size {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 3rem;
+      cursor: pointer;
+    }
+
     .overlay {
       display: none;
     }
+
     nav {
       display: none;
     }
   }
 }
 
-    /* TABLET SCREEN */
-    /* TABLET SCREEN */
-    /* TABLET SCREEN */
+/* TABLET SCREEN */
+/* TABLET SCREEN */
+/* TABLET SCREEN */
 
-    @media (max-width: 1260px) {
-      .header-container {
-        header {
-          max-width: 1200px;
-          padding: 0 2rem;
-        
-          .logo {
-            width: 70px;
-            height: auto;
-        }
-        }
+@media (max-width: 1260px) {
+  .header-container {
+    header {
+      max-width: 1200px;
+      padding: 0 2rem;
+
+      .logo {
+        width: 70px;
+        height: auto;
+      }
+
+      .menu {
+        margin-left: 76px;
       }
     }
+  }
+}
 
-    /* MOBILE SCREEN */
-    /* MOBILE SCREEN */
-    /* MOBILE SCREEN */
+/* MOBILE SCREEN */
+/* MOBILE SCREEN */
+/* MOBILE SCREEN */
 
-    @media (max-width: 768px) {
-      .header-container {
-        header {
-          max-width: 100%;
-          padding: 0 2rem;
+@media (max-width: 768px) {
+  .header-container {
+    header {
+      max-width: 100%;
+      padding: 0 2rem;
 
-          .logo {
+      .logo {
         width: 60px;
         height: auto;
-    }
-          .menu {
+      }
+
+      .menu {
         display: none;
       }
+
       .contact {
         display: none;
       }
@@ -172,19 +220,20 @@ const isMenuOpen = ref(false)
       .hamburger {
         display: block;
         padding: 1rem 0 1rem 1rem;
+
         svg {
-        width: 45px;
-        height: 45px;
+          width: 45px;
+          height: 45px;
         }
-      }   
+      }
 
       .overlay {
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 30%;
-      height: 100vh;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100vh;
       }
 
       nav {
@@ -194,14 +243,15 @@ const isMenuOpen = ref(false)
         gap: 3rem;
         position: fixed;
         top: 0;
-        right: 0; 
-        bottom: 0; 
+        right: 0;
+        bottom: 0;
         width: 70%;
         height: 100vh;
-        background: white;
+        background: $color-secondary;
         flex-direction: column;
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
+        z-index: 2;
 
         &.open {
           transform: translateX(0);
@@ -211,7 +261,7 @@ const isMenuOpen = ref(false)
           border: none;
           background: none;
           padding: 0;
-          cursor: pointer; 
+          cursor: pointer;
           width: 30px;
           height: 30px;
           position: absolute;
@@ -222,22 +272,30 @@ const isMenuOpen = ref(false)
 
         .menu,
         .contact {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+
+          a {
+            color: $color-primary;
+          }
         }
 
         .menu ul {
           flex-direction: column;
           gap: 0.5rem;
+
           li {
             text-align: center;
             margin: 1rem 0;
+
             a {
               font-size: 1.2rem;
               font-weight: 600;
               padding: 1rem 3rem;
+              color: $color-primary;
             }
           }
         }
@@ -261,31 +319,14 @@ const isMenuOpen = ref(false)
   }
 
   p {
-    color: #F2EFDF;
+    color: $color-secondary;
     margin-bottom: 1rem;
     padding: 0 1rem;
     text-align: center;
   }
 
   a {
-    background-color: #F2EFDF;
-    padding: .8rem 1.8rem;
-    border-radius: 30px;
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-    border: solid 2px #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-
-    .arrow-right {
-      svg {
-        width: 20px;
-        height: 20px;
-      }
-    }
+    margin: 0;
   }
 
   .scroll-icon {
@@ -293,6 +334,9 @@ const isMenuOpen = ref(false)
     bottom: 0;
     right: 0;
     padding: 2rem;
+    z-index: 1;
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -301,15 +345,16 @@ const isMenuOpen = ref(false)
     .scroll-icon {
       padding: 0;
     }
+
     .scroll-wrapper {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: flex-end;
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
