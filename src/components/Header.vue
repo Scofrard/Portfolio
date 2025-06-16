@@ -333,7 +333,7 @@ const isMenuOpen = ref(false)
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: 2rem;
+    padding: 2.5rem;
     z-index: 1;
     width: 35px;
     height: 35px;
@@ -343,7 +343,7 @@ const isMenuOpen = ref(false)
 @media (min-width: 1280px) {
   .herobanner {
     .scroll-icon {
-      padding: 0;
+      padding: 0rem;
     }
 
     .scroll-wrapper {

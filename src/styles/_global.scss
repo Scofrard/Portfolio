@@ -80,6 +80,30 @@ a {
   }
 }
 
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
 .primary-btn {
   background-color: $color-secondary;
   padding: .8rem 1.8rem;
