@@ -5,8 +5,8 @@
       <Logo class="logo" />
       <div class="menu">
         <ul>
-          <li><a href="#">A propos</a></li>
-          <li><a href="#">Compétences</a></li>
+          <li><a href="#about" @click.prevent="scrollTo('#about')">A propos</a></li>
+          <li><a href=" #">Compétences</a></li>
           <li><a href="#">Projets</a></li>
         </ul>
       </div>
@@ -76,6 +76,23 @@ import ArrowDropLeftIcon from '@/assets/icons/arrowdropleft.svg'
 import HtmlIcon from '@/assets/icons/html5.svg'
 
 const isMenuOpen = ref(false)
+
+
+import gsap from 'gsap'
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
+
+gsap.registerPlugin(ScrollToPlugin)
+
+function scrollTo(target) {
+  gsap.to(window, {
+    duration: 1.2,
+    scrollTo: {
+      y: target,
+      offsetY: 0,
+    },
+    ease: 'circ.out'
+  })
+}
 </script>
 
 

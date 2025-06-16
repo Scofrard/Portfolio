@@ -1,14 +1,15 @@
 <template>
-    <div class="about-container">
+    <div class="about-container" id="about">
         <div>
             <p>Passionné par le développement web et le design, je suis un créatif curieux et impliqué. Spécialisé dans
                 le digital, mon approche allie une réflexion centrée sur l’utilisateur à la création d’univers
                 graphiques inédits</p>
             <div class="button-group">
-                <a href="#" class="primary-btn">Se connecter sur Linkedin<span class="arrow-right">
+                <a href="https://www.linkedin.com/in/%F0%9F%9A%80-julien-petit-182580266/" target="_blank"
+                    class="primary-btn">Se connecter sur Linkedin<span class="arrow-right">
                         <ConnectIcon />
                     </span></a>
-                <a href="#" class="primary-btn">Télécharger mon CV<span class="arrow-right">
+                <a href="#" target="_blank" class="primary-btn">Télécharger mon CV<span class="arrow-right">
                         <DownloadCvIcon />
                     </span></a>
             </div>
