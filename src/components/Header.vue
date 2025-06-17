@@ -11,15 +11,15 @@
         </ul>
       </div>
       <div class="contact">
-        <a href="https://github.com/Scofrard" target="_blank">CV</a>
-        <a href="https://www.linkedin.com/in/%F0%9F%9A%80-julien-petit-182580266/" target="_blank">
+        <a href="https://github.com/Scofrard" target="_blank" aria-label="Télécharger mon CV">CV</a>
+        <a href="https://www.linkedin.com/in/%F0%9F%9A%80-julien-petit-182580266/" target="_blank" aria-label="M'ajouter sur Linkedin">
           <LinkedinIcon class="icon-size" />
         </a>
-        <a href="https://github.com/Scofrard" target="_blank">
+        <a href="https://github.com/Scofrard" target="_blank" aria-label="Découvrir mon github">
           <GithubIcon class="icon-size" />
         </a>
       </div>
-      <button class="hamburger" @click="isMenuOpen = !isMenuOpen">
+      <button class="hamburger" title="Menu hamburger" @click="isMenuOpen = !isMenuOpen">
         <HamburgerIcon />
       </button>
       <div v-if="isMenuOpen" class="overlay" @click="isMenuOpen = false"></div>
@@ -35,13 +35,13 @@
           </ul>
         </div>
         <div class="contact">
-          <a href="https://www.linkedin.com/in/%F0%9F%9A%80-julien-petit-182580266/" target="_blank">
+          <a href="https://www.linkedin.com/in/%F0%9F%9A%80-julien-petit-182580266/" target="_blank" aria-label="M'ajouter sur Linkedin">
             <LinkedinDarkIcon class="icon-size" />
           </a>
-          <a href="https://github.com/Scofrard" target="_blank">
+          <a href="https://github.com/Scofrard" target="_blank" aria-label="Découvrir mon github">
             <GithubDarkIcon class="icon-size" />
           </a>
-          <a href="https://github.com/Scofrard" target="_blank">CV</a>
+          <a href="https://github.com/Scofrard" target="_blank" aria-label="Télécharger mon CV">CV</a>
         </div>
       </nav>
     </header>
@@ -52,7 +52,7 @@
       <h1>Julien Petit</h1>
       <h2>Le dev qu'il vous faut</h2>
       <p>Designer UI/UX et Développeur front-end freelance en Belgique</p>
-      <a href="#" class="primary-btn">Me contacter
+      <a href="#" class="primary-btn" aria-label="Me contacter">Me contacter
         <ArrowRightIcon />
       </a>
       <div class="scroll-wrapper">

@@ -6,10 +6,10 @@
                 graphiques inédits</p>
             <div class="button-group">
                 <a href="https://www.linkedin.com/in/%F0%9F%9A%80-julien-petit-182580266/" target="_blank"
-                    class="primary-btn">Se connecter sur Linkedin<span class="arrow-right">
+                    class="primary-btn" aria-label="M'ajouter sur Linkedin">Se connecter sur Linkedin<span class="arrow-right">
                         <ConnectIcon />
                     </span></a>
-                <a href="#" target="_blank" class="primary-btn">Télécharger mon CV<span class="arrow-right">
+                <a href="#" target="_blank" class="primary-btn" aria-label="Télécharger mon CV">Télécharger mon CV<span class="arrow-right">
                         <DownloadCvIcon />
                     </span></a>
             </div>
