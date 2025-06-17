@@ -24,7 +24,7 @@
       </button>
       <div v-if="isMenuOpen" class="overlay" @click="isMenuOpen = false"></div>
       <nav :class="{ open: isMenuOpen }">
-        <button class="close" @click="isMenuOpen = false">
+        <button class="close" title="Fermer le menu hamburger" @click="isMenuOpen = false">
           <CloseIcon />
         </button>
         <div class="menu">
