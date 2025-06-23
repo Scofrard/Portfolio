@@ -2,12 +2,14 @@
     <div class="about-container" id="about">
         <div>
             <p id="about-text">
-                <span>Passionné par le développement web et le</span><br>
-                <span>design, je suis un créatif curieux et impliqué.</span><br>
-                <span>Spécialisé dans le digital, mon approche</span><br>
-                <span>allie une réflexion centrée sur l’utilisateur</span><br>
-                <span>à la création d’univers graphiques inédits.</span>
-            </p>
+  <span>Passionné par le développement web et le</span><br>
+  <span>design, je suis un créatif curieux et impliqué.</span><br>
+  <span>Spécialisé dans le digital, mon approche</span><br>
+  <span>allie une réflexion centrée sur l'utilisateur</span><br>
+  <span>à la création d'univers graphiques inédits.</span>
+</p>
+
+
             <div class="button-group">
                 <a href="https://www.linkedin.com/in/%F0%9F%9A%80-julien-petit-182580266/" target="_blank"
                     class="primary-btn" aria-label="M'ajouter sur Linkedin">Se connecter sur Linkedin<span class="arrow-right">
@@ -28,29 +30,69 @@ import DownloadCvIcon from '@/assets/icons/downloadcv.svg'
 import { onMounted, onBeforeUnmount } from 'vue'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import Splitting from 'splitting'
+import 'splitting/dist/splitting.css'
+import 'splitting/dist/splitting-cells.css'
+
 gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
-  const lines = gsap.utils.toArray('#about-text span')
+  const aboutText = document.querySelector('#about-text')
+  if (!aboutText) return
+
+  const lines = aboutText.querySelectorAll('span')
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: aboutText,
+      start: 'top 80%',
+      end: 'bottom 40%',
+      scrub: true,
+    }
+  })
+
+  let delay = 0
+  const stagger = 0.03
+  const duration = 0.4
 
   lines.forEach((line) => {
-    gsap.from(line, {
-      x: -50, 
-      opacity: 0,
-      duration: 3,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: line,
-        start: 'top 80%', 
-      },
+    const text = line.textContent || ''
+    line.innerHTML = ''
+
+    const chars = [...text].map((char) => {
+      const span = document.createElement('span')
+      span.className = 'char'
+      span.textContent = char === ' ' ? '\u00A0' : char
+      line.appendChild(span)
+      return span
     })
+
+    if (chars.length === 0) return
+
+    gsap.set(chars, {
+      opacity: 0.1,
+    })
+
+    tl.to(chars, {
+      opacity: 1,
+      ease: 'power2.out',
+      duration,
+      stagger,
+    }, delay)
+
+    delay += chars.length * stagger
   })
 })
 
+
 onBeforeUnmount(() => {
-  ScrollTrigger.killAll()
+  ScrollTrigger.getAll().forEach(trigger => trigger.kill())
 })
 </script>
+
+
+
+
 
 <style lang="scss">
 @use '@/styles/global.scss' as *;
@@ -70,11 +112,18 @@ onBeforeUnmount(() => {
             font-size: 1.5rem;
             margin-bottom: 2rem;
 
-            #about-text span {
-              display: block;
-              overflow: hidden; // optionnel si tu veux du clip
-            }
+            #about-text {
+  display: block;
+  line-height: 1.6;
+  max-width: 60ch;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
         }
+
 
         .button-group {
             padding: 0;
@@ -90,6 +139,7 @@ onBeforeUnmount(() => {
         }
     }
 }
+
 
 @media (min-width: 1280px) {
     .about-container div {
