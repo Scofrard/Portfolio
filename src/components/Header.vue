@@ -51,7 +51,7 @@
     <div class="herobanner">
       <h1>Julien Petit</h1>
       <h2>Le dev qu'il vous faut</h2>
-      <p>Designer UI/UX et Développeur front-end freelance en Belgique</p>
+      <p>Graphiste, Designer UI/UX et Développeur front-end belge</p>
       <a href="#" class="primary-btn" aria-label="Me contacter">Me contacter
         <ArrowRightIcon />
       </a>

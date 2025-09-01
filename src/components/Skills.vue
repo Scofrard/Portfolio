@@ -1,7 +1,7 @@
 <template>
   <div class="skills-container">
     <div>
-      <h2>Mes Skills</h2>
+      <!--<h2>Mes Skills</h2>-->
     </div>
   </div>
 </template>

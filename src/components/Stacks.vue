@@ -1,7 +1,7 @@
 <template>
   <div class="stacks-container">
     <div>
-      <h2>Mes Stacks</h2>
+      <!--<h2>Mes Stacks</h2>-->
     </div>
   </div>
 </template>
