@@ -19,7 +19,7 @@
             <ConnectIcon /> </span
         ></a>
         <a
-          href="/src/assets/pdf/cvjulienpetit.pdf"
+          href="assets/pdf/cvjulienpetit.pdf"
           download="cv_julien_petit.pdf"
           target="_blank"
           class="primary-btn"

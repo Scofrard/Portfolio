@@ -11,7 +11,7 @@
         </ul>
       </div>
       <div class="contact">
-        <a href="/src/assets/pdf/cvjulienpetit.pdf" download="cv_julien_petit.pdf" target="_blank" aria-label="Télécharger mon CV">
+        <a href="assets/pdf/cvjulienpetit.pdf" download="cv_julien_petit.pdf" target="_blank" aria-label="Télécharger mon CV">
     CV
   </a>
         <a href="https://www.linkedin.com/in/%F0%9F%9A%80-julien-petit-182580266/" target="_blank" aria-label="M'ajouter sur Linkedin">
@@ -43,7 +43,7 @@
           <a href="https://github.com/Scofrard" target="_blank" aria-label="Découvrir mon github">
             <GithubDarkIcon class="icon-size" />
           </a>
-          <a href="/src/assets/pdf/cvjulienpetit.pdf" download="cv_julien_petit.pdf" target="_blank" aria-label="Télécharger mon CV">
+          <a href="assets/pdf/cvjulienpetit.pdf" download="cv_julien_petit.pdf" target="_blank" aria-label="Télécharger mon CV">
     CV
   </a>
         </div>
