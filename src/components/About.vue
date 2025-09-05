@@ -19,7 +19,8 @@
             <ConnectIcon /> </span
         ></a>
         <a
-          href="#"
+          href="/src/assets/pdf/cvjulienpetit.pdf"
+          download="cv_julien_petit.pdf"
           target="_blank"
           class="primary-btn"
           aria-label="Télécharger mon CV"

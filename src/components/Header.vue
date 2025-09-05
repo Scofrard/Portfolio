@@ -6,12 +6,14 @@
       <div class="menu">
         <ul>
           <li><a href="#about" @click.prevent="scrollTo('#about')">A propos</a></li>
-          <li><a href=" #">Compétences</a></li>
+          <li><a href="#">Compétences</a></li>
           <li><a href="#">Projets</a></li>
         </ul>
       </div>
       <div class="contact">
-        <a href="https://github.com/Scofrard" target="_blank" aria-label="Télécharger mon CV">CV</a>
+        <a href="/src/assets/pdf/cvjulienpetit.pdf" download="cv_julien_petit.pdf" target="_blank" aria-label="Télécharger mon CV">
+    CV
+  </a>
         <a href="https://www.linkedin.com/in/%F0%9F%9A%80-julien-petit-182580266/" target="_blank" aria-label="M'ajouter sur Linkedin">
           <LinkedinIcon class="icon-size" />
         </a>
@@ -29,7 +31,7 @@
         </button>
         <div class="menu">
           <ul>
-            <li><a href="#">A propos</a></li>
+            <li><a href="#about" @click.prevent="scrollTo('#about')">A propos</a></li>
             <li><a href="#">Compétences</a></li>
             <li><a href="#">Projets</a></li>
           </ul>
@@ -41,7 +43,9 @@
           <a href="https://github.com/Scofrard" target="_blank" aria-label="Découvrir mon github">
             <GithubDarkIcon class="icon-size" />
           </a>
-          <a href="https://github.com/Scofrard" target="_blank" aria-label="Télécharger mon CV">CV</a>
+          <a href="/src/assets/pdf/cvjulienpetit.pdf" download="cv_julien_petit.pdf" target="_blank" aria-label="Télécharger mon CV">
+    CV
+  </a>
         </div>
       </nav>
     </header>
@@ -51,7 +55,7 @@
     <div class="herobanner">
       <h1>Julien Petit</h1>
       <h2>Le dev qu'il vous faut</h2>
-      <p>Graphiste, Designer UI/UX et Développeur front-end belge</p>
+      <p>Graphiste, Designer UI/UX et Développeur front-end</p>
       <a href="#" class="primary-btn" aria-label="Me contacter">Me contacter
         <ArrowRightIcon />
       </a>
